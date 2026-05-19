@@ -281,7 +281,7 @@ h3 {
 
 .proof-section {
   display: grid;
-  grid-template-columns: minmax(0, 0.8fr) minmax(360px, 1fr);
+  grid-template-columns: minmax(0, 0.72fr) minmax(420px, 1fr);
   gap: clamp(28px, 5vw, 72px);
   align-items: start;
   background: var(--blue);
@@ -298,31 +298,80 @@ h3 {
   color: rgba(255, 255, 255, 0.86);
 }
 
-.quote-stack {
+.featured-before-after {
   display: grid;
-  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
 }
 
-blockquote {
+.featured-before-after figure,
+.project-card {
   margin: 0;
-  padding: 26px;
-  border-left: 7px solid var(--gold);
+  overflow: hidden;
   border-radius: 8px;
   background: var(--paper);
-  color: var(--charcoal);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.28rem;
-  line-height: 1.35;
 }
 
-cite {
+.featured-before-after img,
+.project-card img,
+.workshop-note img {
   display: block;
-  margin-top: 14px;
-  color: var(--slate);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.9rem;
-  font-style: normal;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featured-before-after img {
+  aspect-ratio: 4 / 5;
+}
+
+figcaption {
+  padding: 12px 14px;
+  color: var(--charcoal);
+  font-size: 0.88rem;
   font-weight: 800;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: 1.2fr repeat(2, minmax(0, 0.9fr));
+  gap: 16px;
+  padding: clamp(22px, 5vw, 72px);
+  background: var(--cream);
+}
+
+.project-card {
+  border: 1px solid rgba(54, 95, 109, 0.2);
+}
+
+.project-card.large {
+  grid-row: span 2;
+}
+
+.project-card img {
+  aspect-ratio: 4 / 3;
+}
+
+.project-card.large img {
+  aspect-ratio: 4 / 3.3;
+}
+
+.project-card div {
+  padding: 18px;
+}
+
+.project-type {
+  margin-bottom: 8px;
+  color: var(--gold);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project-card h3 {
+  margin: 0;
+  line-height: 1.25;
 }
 
 .about-band {
@@ -339,9 +388,34 @@ cite {
   background: var(--white);
 }
 
-.about-band p:last-child {
+.about-copy > p {
   margin: 0;
   font-size: 1.14rem;
+}
+
+.workshop-note {
+  display: grid;
+  grid-template-columns: minmax(130px, 0.5fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: stretch;
+  margin-top: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(54, 95, 109, 0.24);
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.workshop-note img {
+  min-height: 220px;
+}
+
+.workshop-note div {
+  padding: 18px 18px 18px 0;
+}
+
+.workshop-note p:last-child {
+  margin: 0;
+  font-size: 1rem;
 }
 
 .contact-section {
@@ -416,6 +490,14 @@ textarea {
     grid-template-columns: 1fr;
   }
 
+  .project-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-card.large {
+    grid-row: auto;
+  }
+
   .nav {
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -453,7 +535,14 @@ textarea {
   }
 
   .service-grid,
-  .trust-strip {
+  .trust-strip,
+  .featured-before-after,
+  .project-gallery,
+  .workshop-note {
     grid-template-columns: 1fr;
+  }
+
+  .workshop-note div {
+    padding: 18px;
   }
 }
