@@ -478,6 +478,15 @@ textarea {
   cursor: pointer;
 }
 
+.email-fallback {
+  color: var(--blue);
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .thanks-section {
   min-height: calc(100vh - 92px);
   padding: clamp(80px, 12vw, 150px) clamp(22px, 5vw, 72px);

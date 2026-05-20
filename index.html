@@ -232,11 +232,12 @@
             Tell us what you are working on. We will follow up to understand the scope, priorities, and next steps.
           </p>
         </div>
-        <form class="contact-card" action="https://formsubmit.co/christianpiatt71@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="New project inquiry from PiattHomeRepair.com" />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_next" value="https://piatthomerepair.com/thanks.html" />
-          <input type="hidden" name="_honey" value="" />
+        <form
+          class="contact-card"
+          action="mailto:christianpiatt71@gmail.com?subject=New%20project%20inquiry%20from%20PiattHomeRepair.com"
+          method="POST"
+          enctype="text/plain"
+        >
           <label>
             Name
             <input type="text" name="name" placeholder="Your name" required />
@@ -284,7 +285,11 @@
             For larger projects, we help you understand likely scope, budget ranges, assumptions, decision points, and
             possible unknowns before work begins.
           </p>
+          <p class="form-note">
+            For now, this button opens an email draft so your message can be sent directly.
+          </p>
           <button type="submit">Tell Us About Your Project</button>
+          <a class="email-fallback" href="mailto:christianpiatt71@gmail.com">Email us directly</a>
         </form>
       </section>
     </main>
