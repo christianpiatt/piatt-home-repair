@@ -447,6 +447,10 @@ figcaption {
   font-size: 0.92rem;
 }
 
+.botcheck {
+  display: none;
+}
+
 label {
   display: grid;
   gap: 7px;

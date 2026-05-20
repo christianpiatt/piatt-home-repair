@@ -234,13 +234,17 @@
         </div>
         <form
           class="contact-card"
-          action="mailto:christianpiatt71@gmail.com?subject=New%20project%20inquiry%20from%20PiattHomeRepair.com"
+          action="https://api.web3forms.com/submit"
           method="POST"
-          enctype="text/plain"
         >
+          <input type="hidden" name="access_key" value="ce83958d-3904-46b8-b8a4-35507c3b1bc1" />
+          <input type="hidden" name="subject" value="New project inquiry from PiattHomeRepair.com" />
+          <input type="hidden" name="from_name" value="Piatt Home Repair Website" />
+          <input type="hidden" name="redirect" value="https://piatthomerepair.com/thanks.html" />
+          <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off" />
           <label>
             Name
-            <input type="text" name="name" placeholder="Your name" required />
+            <input type="text" name="Homeowner name" placeholder="Your name" required />
           </label>
           <label>
             Email
@@ -248,15 +252,15 @@
           </label>
           <label>
             Phone
-            <input type="tel" name="phone" placeholder="Best number to reach you" />
+            <input type="tel" name="Phone number" placeholder="Best number to reach you" />
           </label>
           <label>
             City
-            <input type="text" name="city" placeholder="Richardson, Plano, Far North Dallas..." required />
+            <input type="text" name="City / service area" placeholder="Richardson, Plano, Far North Dallas..." required />
           </label>
           <label>
             Project type
-            <select name="project_type" required>
+            <select name="Project type" required>
               <option>Repair or handyman work</option>
               <option>Home updates for an older home</option>
               <option>Bathroom remodeling</option>
@@ -269,7 +273,7 @@
           </label>
           <label>
             Ideal timing
-            <select name="ideal_timing">
+            <select name="Ideal timing">
               <option>As soon as practical</option>
               <option>In the next few weeks</option>
               <option>In the next few months</option>
@@ -279,14 +283,11 @@
           </label>
           <label>
             What can we help with?
-            <textarea name="message" placeholder="A short description is plenty for now." required></textarea>
+            <textarea name="Project details" placeholder="A short description is plenty for now." required></textarea>
           </label>
           <p class="form-note">
             For larger projects, we help you understand likely scope, budget ranges, assumptions, decision points, and
             possible unknowns before work begins.
-          </p>
-          <p class="form-note">
-            For now, this button opens an email draft so your message can be sent directly.
           </p>
           <button type="submit">Tell Us About Your Project</button>
           <a class="email-fallback" href="mailto:christianpiatt71@gmail.com">Email us directly</a>
