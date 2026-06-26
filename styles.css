@@ -353,6 +353,10 @@ figcaption {
   grid-row: span 2;
 }
 
+.project-card.before-after-card {
+  grid-column: span 2;
+}
+
 .project-card img {
   aspect-ratio: 4 / 3;
 }
@@ -363,6 +367,29 @@ figcaption {
 
 .project-card div {
   padding: 18px;
+}
+
+.before-after-images {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  padding: 0;
+}
+
+.before-after-images figure {
+  margin: 0;
+  overflow: hidden;
+  background: var(--paper);
+}
+
+.before-after-images img {
+  height: auto;
+  aspect-ratio: 4 / 3;
+}
+
+.before-after-images figcaption {
+  padding: 10px 12px;
+  background: var(--paper);
 }
 
 .project-type {
@@ -638,8 +665,13 @@ textarea {
   .trust-strip,
   .featured-before-after,
   .project-gallery,
+  .before-after-images,
   .workshop-note {
     grid-template-columns: 1fr;
+  }
+
+  .project-card.before-after-card {
+    grid-column: auto;
   }
 
   .workshop-note div {
